@@ -1,0 +1,10 @@
+{
+  // "html.format.wrapAttributes": "force",
+  // "editor.tabSize": 2,
+  // "javascript.preferences.quoteStyle": "single",
+  // "typescript.preferences.quoteStyle": "single",
+  // "editor.formatOnSave": true,
+  // "editor.codeActionsOnSave": {
+  //   "source.organizeImports": true
+  // }
+}
