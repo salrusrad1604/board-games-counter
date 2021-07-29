@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1627589474332,
+  "timestamp": 1627590363904,
   "index": "/board-games-counter/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/board-games-counter/favicon.ico",
         "/board-games-counter/index.html",
-        "/board-games-counter/main.9c7b51e6aa8c5b7a0fe8.js",
+        "/board-games-counter/main.ad91a60c3beb7ff62a11.js",
         "/board-games-counter/manifest.webmanifest",
         "/board-games-counter/polyfills.8c151b8375e767ff858f.js",
         "/board-games-counter/runtime.0e49e2b53282f40c8925.js",
@@ -52,8 +52,8 @@
     "/board-games-counter/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/board-games-counter/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/board-games-counter/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/board-games-counter/index.html": "e59fe58ca20ab6b7361f217d096663050722f859",
-    "/board-games-counter/main.9c7b51e6aa8c5b7a0fe8.js": "ca211d2298b952ad6f6f4bd5772f98789dc2b91a",
+    "/board-games-counter/index.html": "5c7c6e50db586ca89d27caf8c2320d81ec2f4057",
+    "/board-games-counter/main.ad91a60c3beb7ff62a11.js": "cdb7942e48f0c5d0f9d9b0bf088e5abb16fba55b",
     "/board-games-counter/manifest.webmanifest": "0c707125b2107e43d944004da1218576173b1023",
     "/board-games-counter/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "/board-games-counter/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
