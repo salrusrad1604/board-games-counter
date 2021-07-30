@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1627590363904,
+  "timestamp": 1627668351535,
   "index": "/board-games-counter/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/board-games-counter/favicon.ico",
         "/board-games-counter/index.html",
-        "/board-games-counter/main.ad91a60c3beb7ff62a11.js",
+        "/board-games-counter/main.d2f498f9f2d86c44bf7b.js",
         "/board-games-counter/manifest.webmanifest",
         "/board-games-counter/polyfills.8c151b8375e767ff858f.js",
         "/board-games-counter/runtime.0e49e2b53282f40c8925.js",
-        "/board-games-counter/styles.09e2c710755c8867a460.css"
+        "/board-games-counter/styles.b8bb07f76b7485ebcdd1.css"
       ],
       "patterns": []
     },
@@ -29,6 +29,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/board-games-counter/assets/cluedo/cluedo-main-picture.jpg",
         "/board-games-counter/assets/icons/icon-128x128.png",
         "/board-games-counter/assets/icons/icon-144x144.png",
         "/board-games-counter/assets/icons/icon-152x152.png",
@@ -36,13 +37,15 @@
         "/board-games-counter/assets/icons/icon-384x384.png",
         "/board-games-counter/assets/icons/icon-512x512.png",
         "/board-games-counter/assets/icons/icon-72x72.png",
-        "/board-games-counter/assets/icons/icon-96x96.png"
+        "/board-games-counter/assets/icons/icon-96x96.png",
+        "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
+    "/board-games-counter/assets/cluedo/cluedo-main-picture.jpg": "b9ed4e68e7e1e87aff3458673a5751dd06e8e302",
     "/board-games-counter/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/board-games-counter/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/board-games-counter/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -51,13 +54,14 @@
     "/board-games-counter/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/board-games-counter/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/board-games-counter/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg": "3aa8bafad048d91c9693f2a097e17d18da9f1976",
     "/board-games-counter/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/board-games-counter/index.html": "5c7c6e50db586ca89d27caf8c2320d81ec2f4057",
-    "/board-games-counter/main.ad91a60c3beb7ff62a11.js": "cdb7942e48f0c5d0f9d9b0bf088e5abb16fba55b",
+    "/board-games-counter/index.html": "6391e5a132ef46f9a27ed533de278febbb5d82a2",
+    "/board-games-counter/main.d2f498f9f2d86c44bf7b.js": "1ab00bc84a86d34614856fee82bc7731abcefc76",
     "/board-games-counter/manifest.webmanifest": "0c707125b2107e43d944004da1218576173b1023",
     "/board-games-counter/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "/board-games-counter/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/board-games-counter/styles.09e2c710755c8867a460.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "/board-games-counter/styles.b8bb07f76b7485ebcdd1.css": "881eba2dfe9e55bd692c318bfec583bd68f2c0e5"
   },
   "navigationUrls": [
     {
