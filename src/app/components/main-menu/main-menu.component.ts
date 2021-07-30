@@ -10,10 +10,47 @@ export class MainMenuComponent implements OnInit {
     {
       title: 'Покорение марса',
       link: '/terraforming-mars',
+      imgSrc: '../../../assets/terraforming-mars/terraforming-mars-main-picture.jpg',
     },
     {
       title: 'Клудо',
       link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: 'Клудо',
+      link: '/cluedo',
+      imgSrc: '../../../assets/cluedo/cluedo-main-picture.jpg',
     },
   ];
 

@@ -3,7 +3,8 @@
   <mat-card-header>
     {{item.title}}
   </mat-card-header>
-  <img mat-card-image
-       src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-       alt="">
+  <mat-card-content [style.background-image]="'url(' + item.imgSrc + ')'">
+    <!-- <img [attr.src]="item.imgSrc"
+         alt=""> -->
+  </mat-card-content>
 </mat-card>
