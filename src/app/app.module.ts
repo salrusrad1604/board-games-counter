@@ -5,11 +5,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CluedoCounterComponent } from './components/cluedo-counter/cluedo-counter.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { TerraformingMarsCounterComponent } from './components/terraforming-mars-counter/terraforming-mars-counter.component';
 import { SharedModule } from './shared/shared.module';
+import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 
 @NgModule({
-  declarations: [AppComponent, MainMenuComponent],
+  declarations: [AppComponent, MainMenuComponent, TerraformingMarsCounterComponent, CluedoCounterComponent, DialogConfirmComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
