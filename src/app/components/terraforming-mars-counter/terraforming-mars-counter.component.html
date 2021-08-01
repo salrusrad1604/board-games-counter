@@ -1,0 +1,64 @@
+<mat-card class="main">
+	<mat-card class="resources-container">
+		<div class="count-container"
+			 (click)="selectResource(resourceNames.rating)">
+			<p class="counter-text resource-make-count">
+				{{ratingData$ | async}}
+			</p>
+		</div>
+		<div class="img-container"
+			 [style.background-image]="'url(assets/terraforming-mars/rt.jpg)'"></div>
+		<div class="count-container">
+			<button class="reset"
+					mat-flat-button
+					color="warn"
+					(click)="reset()">Reset</button>
+		</div>
+	</mat-card>
+	<mat-card *ngFor="let item of resourcesData$ | async"
+			  class="resources-container">
+		<div class="count-container"
+			 (click)="selectResource(makePrefix + item.resourceType)">
+			<p class="counter-text  resource-make-count">{{item.resourceMakeCount}}</p>
+		</div>
+		<div class="img-container"
+			 [style.background-image]="'url(' + item.imgSrc + ')'"></div>
+		<div class="count-container"
+			 (click)="selectResource(prodPrefix + item.resourceType)">
+			<p class="counter-text resource-prod-count">
+				{{item.resourceProdCount}}
+			</p>
+		</div>
+	</mat-card>
+	<mat-card class="button-settings">
+		<div class="decrement-buttons">
+			<button mat-flat-button
+					color="warn"
+					(click)='incrementDecrementMake(-1)'>-1</button>
+			<button mat-flat-button
+					color="warn"
+					(click)='incrementDecrementMake(-5)'>-5</button>
+			<button mat-flat-button
+					color="warn"
+					(click)='incrementDecrementMake(-10)'>-10</button>
+		</div>
+		<div class="increment-buttons">
+			<button mat-flat-button
+					color="warn"
+					(click)='incrementDecrementMake(1)'>1</button>
+			<button mat-flat-button
+					color="warn"
+					(click)='incrementDecrementMake(5)'>5</button>
+			<button mat-flat-button
+					color="warn"
+					(click)='incrementDecrementMake(10)'>10</button>
+		</div>
+		<div class="final-button-container">
+			<button mat-flat-button
+					color="warn"
+					class="final-button"
+					(click)="produce()">Production</button>
+		</div>
+
+	</mat-card>
+</mat-card>

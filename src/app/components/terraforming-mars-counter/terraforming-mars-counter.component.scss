@@ -1,0 +1,96 @@
+mat-card {
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.resources-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.img-container {
+  flex: 1;
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.count-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+
+  .resource-make-count {
+    border: 5px solid rgba(178, 186, 187, 1);
+    border-radius: 8px;
+  }
+  .resource-prod-count {
+    border: 5px solid rgba(153, 65, 14, 1);
+    border-radius: 8px;
+  }
+}
+
+.counter-text {
+  text-align: center;
+  flex: 1;
+  font-size: 40px;
+  padding: 8px;
+  margin: 0;
+}
+
+.reset {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.button-settings {
+  display: flex;
+  flex: 3;
+
+  > * {
+    padding: 0 2px;
+  }
+}
+
+.decrement-buttons,
+.increment-buttons {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+
+  button {
+    flex: 1;
+    margin: 2px 0;
+    font-size: 24px;
+  }
+}
+
+.decrement-buttons button {
+  background-color: red;
+}
+
+.increment-buttons button {
+  background-color: green;
+}
+
+.final-button-container {
+  display: flex;
+
+  .final-button {
+    margin: 2px 0;
+    background-color: blue;
+  }
+}
