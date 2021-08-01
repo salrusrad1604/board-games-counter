@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1627669445590,
+  "timestamp": 1627849376283,
   "index": "/board-games-counter/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/board-games-counter/favicon.ico",
         "/board-games-counter/index.html",
-        "/board-games-counter/main.05427f4ff48f051613dc.js",
+        "/board-games-counter/main.677b2cfec9ae13c7c1af.js",
         "/board-games-counter/manifest.webmanifest",
         "/board-games-counter/polyfills.8c151b8375e767ff858f.js",
         "/board-games-counter/runtime.0e49e2b53282f40c8925.js",
@@ -38,7 +38,14 @@
         "/board-games-counter/assets/icons/icon-512x512.png",
         "/board-games-counter/assets/icons/icon-72x72.png",
         "/board-games-counter/assets/icons/icon-96x96.png",
-        "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg"
+        "/board-games-counter/assets/terraforming-mars/energy.jpg",
+        "/board-games-counter/assets/terraforming-mars/heat.jpg",
+        "/board-games-counter/assets/terraforming-mars/mega-credits.jpg",
+        "/board-games-counter/assets/terraforming-mars/plant.jpg",
+        "/board-games-counter/assets/terraforming-mars/rt.jpg",
+        "/board-games-counter/assets/terraforming-mars/steel.jpg",
+        "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg",
+        "/board-games-counter/assets/terraforming-mars/titan.jpg"
       ],
       "patterns": []
     }
@@ -54,10 +61,17 @@
     "/board-games-counter/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/board-games-counter/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/board-games-counter/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/board-games-counter/assets/terraforming-mars/energy.jpg": "d49e76a941d6bc5b1a0fd5562f17654a66380b2f",
+    "/board-games-counter/assets/terraforming-mars/heat.jpg": "a2aa28b220b00dbc0583f84ce3be69bfb6d27510",
+    "/board-games-counter/assets/terraforming-mars/mega-credits.jpg": "97ea6ed0be9d207158b1503e0871f94519ec0dfd",
+    "/board-games-counter/assets/terraforming-mars/plant.jpg": "b9f8b9c9f79ab929b6c1950fba82b838133ebb27",
+    "/board-games-counter/assets/terraforming-mars/rt.jpg": "a6a71a566d806fb8d194c900cea7e0325eb945e6",
+    "/board-games-counter/assets/terraforming-mars/steel.jpg": "9d6df8769262d8a0a650cdef6968c386831fc3af",
     "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg": "3aa8bafad048d91c9693f2a097e17d18da9f1976",
+    "/board-games-counter/assets/terraforming-mars/titan.jpg": "d7466d9a5bfb1f77b3603eda7fbaea4dc9ca5836",
     "/board-games-counter/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/board-games-counter/index.html": "e65010ad51affc0be49241378ddbdd30c5cdc80c",
-    "/board-games-counter/main.05427f4ff48f051613dc.js": "80a62bf4e598ab2839a23d35daae3c0392babe8b",
+    "/board-games-counter/index.html": "995d8df0173795aa6955fbbf6cfc42b8ed69190b",
+    "/board-games-counter/main.677b2cfec9ae13c7c1af.js": "c879ae61cde052266916049fb209c203beac062f",
     "/board-games-counter/manifest.webmanifest": "0c707125b2107e43d944004da1218576173b1023",
     "/board-games-counter/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "/board-games-counter/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
