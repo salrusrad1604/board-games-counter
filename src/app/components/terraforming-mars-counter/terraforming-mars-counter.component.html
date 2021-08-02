@@ -1,35 +1,41 @@
 <mat-card class="main">
-	<mat-card class="resources-container">
-		<div class="count-container"
-			 (click)="selectResource(resourceNames.rating)">
-			<p class="counter-text resource-make-count">
-				{{ratingData$ | async}}
-			</p>
-		</div>
-		<div class="img-container"
-			 [style.background-image]="'url(assets/terraforming-mars/rt.jpg)'"></div>
-		<div class="count-container">
-			<button class="reset"
-					mat-flat-button
-					color="warn"
-					(click)="reset()">Reset</button>
-		</div>
-	</mat-card>
-	<mat-card *ngFor="let item of resourcesData$ | async"
-			  class="resources-container">
-		<div class="count-container"
-			 (click)="selectResource(makePrefix + item.resourceType)">
-			<p class="counter-text  resource-make-count">{{item.resourceMakeCount}}</p>
-		</div>
-		<div class="img-container"
-			 [style.background-image]="'url(' + item.imgSrc + ')'"></div>
-		<div class="count-container"
-			 (click)="selectResource(prodPrefix + item.resourceType)">
-			<p class="counter-text resource-prod-count">
-				{{item.resourceProdCount}}
-			</p>
-		</div>
-	</mat-card>
+	<div class="resources-container">
+		<mat-card class="resource-container">
+			<div class="count-container"
+				 (click)="setSelectResource(resourceNames.rating)">
+				<p class="counter-text resource-make-count"
+				   [ngClass]="(selectResource| async) === resourceNames.rating ? 'selectField' : ''">
+					{{ratingData$ | async}}
+				</p>
+			</div>
+			<div class="img-container"
+				 [style.background-image]="'url(assets/terraforming-mars/rt.jpg)'"></div>
+			<div class="count-container">
+				<button class="reset"
+						mat-flat-button
+						color="warn"
+						(click)="reset()">Reset</button>
+			</div>
+		</mat-card>
+		<mat-card *ngFor="let item of resourcesData$ | async"
+				  class="resource-container">
+			<div class="count-container"
+				 (click)="setSelectResource(makePrefix + item.resourceType)">
+				<p class="counter-text  resource-make-count"
+				   [ngClass]="(selectResource| async) === makePrefix + item.resourceType ? 'selectField' : ''">
+					{{item.resourceMakeCount}}</p>
+			</div>
+			<div class="img-container"
+				 [style.background-image]="'url(' + item.imgSrc + ')'"></div>
+			<div class="count-container"
+				 (click)="setSelectResource(prodPrefix + item.resourceType)">
+				<p class="counter-text resource-prod-count"
+				   [ngClass]="(selectResource| async) === prodPrefix + item.resourceType ? 'selectField' : ''">
+					{{item.resourceProdCount}}
+				</p>
+			</div>
+		</mat-card>
+	</div>
 	<mat-card class="button-settings">
 		<div class="decrement-buttons">
 			<button mat-flat-button

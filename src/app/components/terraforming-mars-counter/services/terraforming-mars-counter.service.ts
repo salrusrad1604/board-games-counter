@@ -9,18 +9,17 @@ export class TerraformingMarsCounterService {
   KEY_STORAGE = 'TERRAFORMING_MARS';
   rating = new BehaviorSubject<number>(ratingInit);
   resources = new BehaviorSubject<ResourceCounter[]>(JSON.parse(JSON.stringify(resourcesInit)));
-
-  selectResource: string = ResourceNames.rating;
+  selectResource = new BehaviorSubject<string>(ResourceNames.rating);
 
   constructor() {
-    this.getData();
+    this._getData();
   }
 
   private _setData() {
     localStorage.setItem(this.KEY_STORAGE, JSON.stringify({ rating: this.rating.value, resources: this.resources.value }));
   }
 
-  private getData() {
+  private _getData() {
     if (localStorage.getItem(this.KEY_STORAGE)) {
       const data = JSON.parse(localStorage.getItem(this.KEY_STORAGE) as string);
       this.rating.next(data.rating);
@@ -29,25 +28,26 @@ export class TerraformingMarsCounterService {
   }
 
   setSelectResource(selectResource: string): void {
-    this.selectResource = selectResource;
+    this.selectResource.next(selectResource);
   }
 
   incrementDecrementMake(value: number): void {
-    if (this.selectResource === ResourceNames.rating) {
+    const serRes = this.selectResource.value;
+    if (serRes === ResourceNames.rating) {
       const curVal = this.rating.value;
       this.rating.next(curVal + value);
       this._setData();
       return;
     }
 
-    if (this.selectResource != null) {
+    if (serRes != null) {
       const newValue = JSON.parse(JSON.stringify(this.resources.value));
       this.resources.next(
         JSON.parse(
           JSON.stringify(
             newValue.map((v: ResourceCounter) => {
-              if (prodPrefix == this.selectResource.slice(0, prodPrefix.length)) {
-                if (v.resourceType === this.selectResource.slice(prodPrefix.length)) {
+              if (prodPrefix == serRes.slice(0, prodPrefix.length)) {
+                if (v.resourceType === serRes.slice(prodPrefix.length)) {
                   v.resourceProdCount = v.resourceProdCount + value;
                 }
                 if (v.resourceProdCount < v.minProdCount) {
@@ -55,8 +55,8 @@ export class TerraformingMarsCounterService {
                 }
               }
 
-              if (makePrefix == this.selectResource.slice(0, makePrefix.length)) {
-                if (v.resourceType === this.selectResource.slice(makePrefix.length)) {
+              if (makePrefix == serRes.slice(0, makePrefix.length)) {
+                if (v.resourceType === serRes.slice(makePrefix.length)) {
                   v.resourceMakeCount = v.resourceMakeCount + value;
                 }
                 if (v.resourceMakeCount < v.minMakeCount) {
@@ -89,6 +89,7 @@ export class TerraformingMarsCounterService {
       v.resourceMakeCount = v.resourceMakeCount + v.resourceProdCount;
       return v;
     });
+
     this.resources.next(newValue);
     this._setData();
   }
