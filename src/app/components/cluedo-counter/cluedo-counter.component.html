@@ -1,1 +1,43 @@
-<p>cluedo-counter works!</p>
+<table>
+	<tr *ngFor='let row of dataSource'>
+		<ng-container *ngFor='let colName of displayedColumns'>
+			<ng-container [ngSwitch]='row[colName].fieldType'>
+				<td *ngSwitchCase="fieldTypeEnum.string"
+						class='string-field'>
+				</td>
+				<td *ngSwitchCase="fieldTypeEnum.input"
+						class='input-field'>
+					<input type="text"
+								 placeholder="Имя"
+								 [value]='row[colName].value'>
+				</td>
+				<td *ngSwitchCase="fieldTypeEnum.empty"
+						class='empty-field'>
+					<input type="text"
+								 disabled>
+				</td>
+				<td *ngSwitchCase="fieldTypeEnum.main"
+						class='main-field'>
+					<p>{{row[colName].value}}</p>
+				</td>
+				<td *ngSwitchCase="fieldTypeEnum.question"
+						class='question-field'>
+					<p>{{row[colName].value}}</p>
+				</td>
+				<td *ngSwitchCase="fieldTypeEnum.outTable"
+						class='outTable-field'>
+					<p>{{row[colName].value}}</p>
+				</td>
+				<td *ngSwitchCase="fieldTypeEnum.checkbox"
+						class='checkbox-field'>
+					<select>
+						<option value=""></option>
+						<option value="+">+</option>
+						<option value="??">??</option>
+						<option value="-">-</option>
+					</select>
+				</td>
+			</ng-container>
+		</ng-container>
+	</tr>
+</table>

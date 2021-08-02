@@ -1,0 +1,51 @@
+* {
+  // border: 1px solid black;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+td {
+  background-color: white;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+.string-field {
+}
+
+.input-field {
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.empty-field {
+  opacity: 0;
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.main-field {
+}
+
+.question-field {
+}
+
+.outTable-field {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+
+.checkbox-field {
+}
