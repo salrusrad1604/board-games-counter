@@ -18,41 +18,6 @@ export class MainMenuComponent {
       link: '/cluedo',
       imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
     },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
-    {
-      title: 'Клудо',
-      link: '/cluedo',
-      imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
-    },
   ];
 
   constructor(private router: Router) {}

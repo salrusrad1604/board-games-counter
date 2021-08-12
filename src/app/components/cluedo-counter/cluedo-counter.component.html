@@ -1,43 +1,77 @@
-<table>
-	<tr *ngFor='let row of dataSource'>
-		<ng-container *ngFor='let colName of displayedColumns'>
+<div class="hide-div"
+	 *ngIf="hideDiv">
+	<button mat-flat-button
+			(click)='hideDiv=!hideDiv'>Показать</button>
+	<button class="reset-button"
+			mat-flat-button
+			(click)='onClick("reset")'>Reset</button>
+</div>
+<table *ngIf="gemeStart">
+	<tr *ngFor='let row of (dataSource | async) let i=index'>
+		<ng-container *ngFor='let colName of displayedColumns | async let j=index'>
 			<ng-container [ngSwitch]='row[colName].fieldType'>
 				<td *ngSwitchCase="fieldTypeEnum.string"
-						class='string-field'>
+					class='string-field'>
 				</td>
 				<td *ngSwitchCase="fieldTypeEnum.input"
-						class='input-field'>
-					<input type="text"
-								 placeholder="Имя"
-								 [value]='row[colName].value'>
+					class='input-field'>
+					<input matInput
+						   type="text"
+						   placeholder="Имя"
+						   [ngModel]="(values|async)[i][j]"
+						   (ngModelChange)="dataChanged($event, i, j)">
 				</td>
 				<td *ngSwitchCase="fieldTypeEnum.empty"
-						class='empty-field'>
+					class='empty-field'>
 					<input type="text"
-								 disabled>
+						   disabled>
 				</td>
 				<td *ngSwitchCase="fieldTypeEnum.main"
-						class='main-field'>
+					class='main-field'>
 					<p>{{row[colName].value}}</p>
 				</td>
 				<td *ngSwitchCase="fieldTypeEnum.question"
-						class='question-field'>
+					class='question-field'>
 					<p>{{row[colName].value}}</p>
 				</td>
 				<td *ngSwitchCase="fieldTypeEnum.outTable"
-						class='outTable-field'>
-					<p>{{row[colName].value}}</p>
+					class='outTable-field'>
+					<button *ngIf='row[colName].click'
+							mat-flat-button
+							color="warn"
+							class="final-button"
+							(click)="onClick(row[colName].click)">{{row[colName].value}}</button>
+					<p *ngIf='!row[colName].click'>{{row[colName].value}}</p>
 				</td>
 				<td *ngSwitchCase="fieldTypeEnum.checkbox"
-						class='checkbox-field'>
-					<select>
-						<option value=""></option>
-						<option value="+">+</option>
-						<option value="??">??</option>
-						<option value="-">-</option>
-					</select>
+					class='checkbox-field'>
+					<mat-select [ngModel]="(values|async)[i][j]"
+								[ngClass]="{
+									'red-color': (values|async)[i][j] == 'false',
+									'grey-color': (values|async)[i][j] == 'question',
+									'green-color': (values|async)[i][j] == 'check'
+								}"
+								(ngModelChange)="dataChanged($event, i, j)">
+						<mat-option [value]='null'></mat-option>
+						<mat-option [value]='"check"'>&#10003;</mat-option>
+						<mat-option [value]='"false"'>&#10007;</mat-option>
+						<mat-option [value]='"question"'>&#8263;</mat-option>
+					</mat-select>
 				</td>
 			</ng-container>
 		</ng-container>
 	</tr>
 </table>
+<mat-card *ngIf="!gemeStart"
+		  class="player-select-card">
+	<mat-select [(ngModel)]='playersNumber'>
+		<mat-option [value]='1'>1</mat-option>
+		<mat-option [value]='2'>2</mat-option>
+		<mat-option [value]='3'>3</mat-option>
+		<mat-option [value]='4'>4</mat-option>
+		<mat-option [value]='5'>5</mat-option>
+		<mat-option [value]='6'>6</mat-option>
+	</mat-select>
+	<button mat-flat-button
+			(click)='onClick("playerSelect")'>Select</button>
+</mat-card>

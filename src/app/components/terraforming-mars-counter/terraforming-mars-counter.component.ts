@@ -39,7 +39,7 @@ export class TerraformingMarsCounterComponent {
   }
 
   reset(): void {
-    const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: 'Рестарт?' } });
+    const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: 'Reset?' } });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
