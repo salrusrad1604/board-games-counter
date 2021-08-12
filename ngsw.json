@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1628337160431,
+  "timestamp": 1628805956867,
   "index": "/board-games-counter/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/board-games-counter/favicon.ico",
         "/board-games-counter/index.html",
-        "/board-games-counter/main.1aefd325c73b5852051d.js",
+        "/board-games-counter/main.1eb901dd8c678f03d33d.js",
         "/board-games-counter/manifest.webmanifest",
         "/board-games-counter/polyfills.8c151b8375e767ff858f.js",
         "/board-games-counter/runtime.0e49e2b53282f40c8925.js",
-        "/board-games-counter/styles.9c896f4fc8981dbbac10.css"
+        "/board-games-counter/styles.86369162a39af7e249f6.css"
       ],
       "patterns": []
     },
@@ -70,12 +70,12 @@
     "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg": "3aa8bafad048d91c9693f2a097e17d18da9f1976",
     "/board-games-counter/assets/terraforming-mars/titan.jpg": "d7466d9a5bfb1f77b3603eda7fbaea4dc9ca5836",
     "/board-games-counter/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/board-games-counter/index.html": "9b6f0e5e4c9df3f0664be3899f6348046f0dcc0e",
-    "/board-games-counter/main.1aefd325c73b5852051d.js": "f60422ed7dd8494b2a740d10c03c80d253e77fe9",
+    "/board-games-counter/index.html": "a265f6357cecadc3ce5c8f5f1df349e8fc0cf719",
+    "/board-games-counter/main.1eb901dd8c678f03d33d.js": "eff98b885922befcdfb591594431d072a9580a99",
     "/board-games-counter/manifest.webmanifest": "0c707125b2107e43d944004da1218576173b1023",
     "/board-games-counter/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "/board-games-counter/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/board-games-counter/styles.9c896f4fc8981dbbac10.css": "ec9af4ee1b90cb487218f0d8b31d6c3dbbb8992c"
+    "/board-games-counter/styles.86369162a39af7e249f6.css": "bde45aa48650cd82d356def542f6eef1e3659243"
   },
   "navigationUrls": [
     {
