@@ -64,14 +64,18 @@
 </table>
 <mat-card *ngIf="!gemeStart"
 		  class="player-select-card">
-	<mat-select [(ngModel)]='playersNumber'>
-		<mat-option [value]='1'>1</mat-option>
-		<mat-option [value]='2'>2</mat-option>
-		<mat-option [value]='3'>3</mat-option>
-		<mat-option [value]='4'>4</mat-option>
-		<mat-option [value]='5'>5</mat-option>
-		<mat-option [value]='6'>6</mat-option>
-	</mat-select>
+	<mat-form-field appearance="fill">
+		<mat-label>Количество игроков</mat-label>
+		<mat-select [(ngModel)]='playersNumber'>
+			<mat-option [value]='1'>1</mat-option>
+			<mat-option [value]='2'>2</mat-option>
+			<mat-option [value]='3'>3</mat-option>
+			<mat-option [value]='4'>4</mat-option>
+			<mat-option [value]='5'>5</mat-option>
+			<mat-option [value]='6'>6</mat-option>
+		</mat-select>
+	</mat-form-field>
 	<button mat-flat-button
+			color="warn"
 			(click)='onClick("playerSelect")'>Select</button>
 </mat-card>

@@ -13,13 +13,14 @@ import { FieldList, type } from './services/interfaces';
 })
 export class CluedoCounterComponent {
   hideDiv = false;
-  gemeStart = false;
+  gemeStart = true;
   fieldTypeEnum = type;
   playersNumber = 1;
   dataSource = this.cluedoCounterService.fields;
   values = this.cluedoCounterService.values;
   displayedColumns: Observable<FieldList[]> = this.cluedoCounterService.playersNumber.pipe(
     map(v => {
+      console.log(v);
       if (v === 0) {
         this.gemeStart = false;
         return this.cluedoCounterService.getAllCol();

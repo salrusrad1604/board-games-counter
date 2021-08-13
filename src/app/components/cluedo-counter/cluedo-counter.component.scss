@@ -46,7 +46,9 @@ td {
   input {
     width: 100%;
     box-sizing: border-box;
-    height: 2em;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    font-size: 2em;
   }
 }
 
@@ -110,14 +112,14 @@ mat-select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
-  mat-select {
-    width: 75%;
-    border: 2px solid #ccc;
-    border-radius: 3px;
+  mat-label {
+    font-size: 1.5em;
   }
+
   button {
-    width: 50%;
+    margin-top: 20px;
+    max-width: 50%;
   }
 }
