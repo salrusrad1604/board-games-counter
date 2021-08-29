@@ -18,6 +18,7 @@
 					<input matInput
 						   type="text"
 						   placeholder="Имя"
+						   autocomplete="off"
 						   [ngModel]="(values|async)[i][j]"
 						   (ngModelChange)="dataChanged($event, i, j)">
 				</td>

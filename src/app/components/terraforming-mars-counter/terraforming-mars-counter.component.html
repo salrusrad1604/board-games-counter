@@ -38,26 +38,16 @@
 	</div>
 	<mat-card class="button-settings">
 		<div class="decrement-buttons">
-			<button mat-flat-button
+			<button *ngFor='let value of buttonCoutnValues'
+					mat-flat-button
 					color="warn"
-					(click)='incrementDecrementMake(-1)'>-1</button>
-			<button mat-flat-button
-					color="warn"
-					(click)='incrementDecrementMake(-5)'>-5</button>
-			<button mat-flat-button
-					color="warn"
-					(click)='incrementDecrementMake(-10)'>-10</button>
+					(click)='incrementDecrementMake(-value)'>{{-value}}</button>
 		</div>
 		<div class="increment-buttons">
-			<button mat-flat-button
+			<button *ngFor='let value of buttonCoutnValues'
+					mat-flat-button
 					color="warn"
-					(click)='incrementDecrementMake(1)'>1</button>
-			<button mat-flat-button
-					color="warn"
-					(click)='incrementDecrementMake(5)'>5</button>
-			<button mat-flat-button
-					color="warn"
-					(click)='incrementDecrementMake(10)'>10</button>
+					(click)='incrementDecrementMake(value)'>{{value}}</button>
 		</div>
 		<div class="final-button-container">
 			<button mat-flat-button

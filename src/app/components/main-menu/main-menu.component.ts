@@ -23,7 +23,6 @@ export class MainMenuComponent {
   constructor(private router: Router) {}
 
   onRoute(url: string): void {
-    console.log();
     this.router.navigate([url]);
   }
 }

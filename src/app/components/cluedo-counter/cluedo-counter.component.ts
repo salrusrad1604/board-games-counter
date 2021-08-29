@@ -20,7 +20,6 @@ export class CluedoCounterComponent {
   values = this.cluedoCounterService.values;
   displayedColumns: Observable<FieldList[]> = this.cluedoCounterService.playersNumber.pipe(
     map(v => {
-      console.log(v);
       if (v === 0) {
         this.gemeStart = false;
         return this.cluedoCounterService.getAllCol();

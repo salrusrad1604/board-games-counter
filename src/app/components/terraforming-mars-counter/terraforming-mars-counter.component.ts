@@ -14,6 +14,8 @@ export class TerraformingMarsCounterComponent {
   prodPrefix = prodPrefix;
   resourceNames = ResourceNames;
 
+  buttonCoutnValues = [1, 5, 10];
+
   selectResource = this.terraMarsService.selectResource;
   resourcesData$ = this.terraMarsService.resources;
   ratingData$ = this.terraMarsService.rating;
