@@ -16,7 +16,7 @@
                     <input type="number"
                            matInput
                            autocomplete="off"
-                           [formControl]='control'>
+                           [formControl]='getControl(i)'>
                     <mat-icon (click)='deleteCountNumber(i)'>delete</mat-icon>
                 </div>
             </mat-form-field>
