@@ -8,11 +8,11 @@ import { TerraformingMarsCounterService } from '../terraforming-mars-counter/ser
   styleUrls: ['./terraforming-mars-counter-settings.component.scss'],
 })
 export class TerraformingMarsCounterSettingsComponent implements OnInit {
-  formArray = new FormArray([]);
+  formArray: FormArray = new FormArray([]);
   constructor(private terraMarsService: TerraformingMarsCounterService) {}
 
   ngOnInit(): void {
-    this.terraMarsService.getCountNumber().forEach(v => {
+    this.terraMarsService.getCountNumber().forEach((v: number[]) => {
       this.formArray.push(new FormControl(v, Validators.min(1)));
     });
     this.formArray.valueChanges.subscribe(v => this.terraMarsService.setCounterNumber(v));
