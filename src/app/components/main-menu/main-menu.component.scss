@@ -11,10 +11,12 @@ mat-card {
   box-sizing: border-box;
 }
 
-mat-card-header {
+mat-card-title {
   font-size: 1.2em;
-  margin-bottom: 4px;
-  margin-left: 8px;
+}
+
+button.mat-icon-button {
+  height: auto;
 }
 
 mat-card-content {
@@ -24,6 +26,11 @@ mat-card-content {
   background-size: contain;
 }
 
-::ng-deep mat-card-header .mat-card-header-text {
-  margin: 0;
+::ng-deep mat-card-title-group {
+  min-height: 40px;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
 }

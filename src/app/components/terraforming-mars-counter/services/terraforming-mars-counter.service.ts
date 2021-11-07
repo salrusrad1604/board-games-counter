@@ -7,6 +7,8 @@ import { makePrefix, prodPrefix, ratingInit, ResourceCounter, ResourceNames, res
 })
 export class TerraformingMarsCounterService {
   KEY_STORAGE = 'TERRAFORMING_MARS';
+  COUNT_NUMBER_KEY_STORAGE = `${this.KEY_STORAGE}_COUNT_NUMBER`;
+  initCounterNumber = [1, 5, 10];
   rating = new BehaviorSubject<number>(ratingInit);
   resources = new BehaviorSubject<ResourceCounter[]>(JSON.parse(JSON.stringify(resourcesInit)));
   selectResource = new BehaviorSubject<string>(ResourceNames.rating);
@@ -98,5 +100,17 @@ export class TerraformingMarsCounterService {
     this.resources.next(resourcesInit);
     this.rating.next(ratingInit);
     this._setData();
+  }
+
+  getCountNumber() {
+    if (localStorage.getItem(this.COUNT_NUMBER_KEY_STORAGE)) {
+      const data = JSON.parse(localStorage.getItem(this.COUNT_NUMBER_KEY_STORAGE) as string);
+      return data === [] ? this.initCounterNumber : data;
+    }
+    return this.initCounterNumber;
+  }
+
+  setCounterNumber(cnAr: number[]) {
+    localStorage.setItem(this.COUNT_NUMBER_KEY_STORAGE, JSON.stringify(cnAr));
   }
 }

@@ -10,9 +10,10 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { TerraformingMarsCounterComponent } from './components/terraforming-mars-counter/terraforming-mars-counter.component';
 import { SharedModule } from './shared/shared.module';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
+import { TerraformingMarsCounterSettingsComponent } from './components/terraforming-mars-counter-settings/terraforming-mars-counter-settings.component';
 
 @NgModule({
-  declarations: [AppComponent, MainMenuComponent, TerraformingMarsCounterComponent, CluedoCounterComponent, DialogConfirmComponent],
+  declarations: [AppComponent, MainMenuComponent, TerraformingMarsCounterComponent, CluedoCounterComponent, DialogConfirmComponent, TerraformingMarsCounterSettingsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

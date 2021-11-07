@@ -1,9 +1,15 @@
-<mat-card *ngFor="let item of gemes"
+<mat-card *ngFor="let item of games"
           class="example-card"
           (click)='onRoute(item.link)'>
-  <mat-card-header>
-    {{item.title}}
-  </mat-card-header>
+
+  <mat-card-title-group>
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <button *ngIf='item.settings'
+            mat-icon-button
+            (click)='onRouteSettings(item.link, $event)'>
+      <mat-icon>settings</mat-icon>
+    </button>
+  </mat-card-title-group>
   <mat-card-content [style.background-image]="'url(' + item.imgSrc + ')'">
   </mat-card-content>
 </mat-card>

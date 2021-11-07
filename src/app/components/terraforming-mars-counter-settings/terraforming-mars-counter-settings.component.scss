@@ -1,0 +1,49 @@
+.main,
+.main > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 450px;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.main {
+  align-items: center;
+}
+
+.main > div {
+  max-width: 400px;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+mat-card-title {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+input {
+  padding-left: 8px;
+}
+
+.input-form {
+  display: flex;
+}
+
+mat-icon {
+  cursor: pointer;
+}
