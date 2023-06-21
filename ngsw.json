@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1640251570072,
+  "timestamp": 1687370313214,
   "index": "/board-games-counter/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/board-games-counter/favicon.ico",
         "/board-games-counter/index.html",
-        "/board-games-counter/main.1fb4bdd6e3679e8d06ff.js",
+        "/board-games-counter/main.c16428a9216c0f5d.js",
         "/board-games-counter/manifest.webmanifest",
-        "/board-games-counter/polyfills.8c151b8375e767ff858f.js",
-        "/board-games-counter/runtime.0e49e2b53282f40c8925.js",
-        "/board-games-counter/styles.86369162a39af7e249f6.css"
+        "/board-games-counter/polyfills.e1645089279b0c54.js",
+        "/board-games-counter/runtime.f6363f103bab30e1.js",
+        "/board-games-counter/styles.43c7d51b99f30f2b.css"
       ],
       "patterns": []
     },
@@ -38,6 +38,7 @@
         "/board-games-counter/assets/icons/icon-512x512.png",
         "/board-games-counter/assets/icons/icon-72x72.png",
         "/board-games-counter/assets/icons/icon-96x96.png",
+        "/board-games-counter/assets/phase-ten/phase-ten-main-picture.jpg",
         "/board-games-counter/assets/terraforming-mars/energy.jpg",
         "/board-games-counter/assets/terraforming-mars/heat.jpg",
         "/board-games-counter/assets/terraforming-mars/mega-credits.jpg",
@@ -61,6 +62,7 @@
     "/board-games-counter/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/board-games-counter/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/board-games-counter/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/board-games-counter/assets/phase-ten/phase-ten-main-picture.jpg": "cc24ef6939b53fdae8e117318a40f6b7a4981e78",
     "/board-games-counter/assets/terraforming-mars/energy.jpg": "d49e76a941d6bc5b1a0fd5562f17654a66380b2f",
     "/board-games-counter/assets/terraforming-mars/heat.jpg": "a2aa28b220b00dbc0583f84ce3be69bfb6d27510",
     "/board-games-counter/assets/terraforming-mars/mega-credits.jpg": "97ea6ed0be9d207158b1503e0871f94519ec0dfd",
@@ -70,12 +72,12 @@
     "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg": "3aa8bafad048d91c9693f2a097e17d18da9f1976",
     "/board-games-counter/assets/terraforming-mars/titan.jpg": "d7466d9a5bfb1f77b3603eda7fbaea4dc9ca5836",
     "/board-games-counter/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/board-games-counter/index.html": "1caa8f1cb880dfd81f070e60ff3e67e0fcda1222",
-    "/board-games-counter/main.1fb4bdd6e3679e8d06ff.js": "0186d8997629c4f79a8b9d8c33fe1996f2ddf48d",
-    "/board-games-counter/manifest.webmanifest": "0c707125b2107e43d944004da1218576173b1023",
-    "/board-games-counter/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
-    "/board-games-counter/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/board-games-counter/styles.86369162a39af7e249f6.css": "bde45aa48650cd82d356def542f6eef1e3659243"
+    "/board-games-counter/index.html": "c0fde37faf637c5a593f4bda00fef4258e4ad811",
+    "/board-games-counter/main.c16428a9216c0f5d.js": "7a8801e127a20dce0045836fb663adf6764f289d",
+    "/board-games-counter/manifest.webmanifest": "362639bd0f2dacfd9646d37a23a62f958af8453c",
+    "/board-games-counter/polyfills.e1645089279b0c54.js": "012b94e8c61a7f8d0714c87ca51420a7647a1c15",
+    "/board-games-counter/runtime.f6363f103bab30e1.js": "609bb9f3f5cad3219609ce42e634437067504ca1",
+    "/board-games-counter/styles.43c7d51b99f30f2b.css": "a657e5ceee0b486060c86ac78d624220e9fb65d2"
   },
   "navigationUrls": [
     {
