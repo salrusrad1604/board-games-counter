@@ -1,0 +1,45 @@
+mat-card {
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 8px;
+  justify-content: center;
+  height: 100%;
+}
+
+.container {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+:host ::ng-deep {
+  .mat-checkbox {
+    margin: 4px 0;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 12px 4px;
+  }
+  .mat-checkbox-inner-container {
+    width: 28px;
+    height: 28px;
+  }
+  .mat-checkbox-label {
+    font-size: 20px;
+    white-space: normal;
+  }
+}
+
+:host ::ng-deep .line-through.mat-checkbox {
+  background-color: rgb(184, 184, 184);
+
+  .mat-checkbox-label {
+    text-decoration: line-through;
+  }
+}

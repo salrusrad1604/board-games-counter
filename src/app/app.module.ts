@@ -11,16 +11,23 @@ import { TerraformingMarsCounterComponent } from './components/terraforming-mars
 import { SharedModule } from './shared/shared.module';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 import { TerraformingMarsCounterSettingsComponent } from './components/terraforming-mars-counter-settings/terraforming-mars-counter-settings.component';
+import { PhaseTenCounterComponent } from './components/phase-ten-counter/phase-ten-counter.component';
 
 @NgModule({
-  declarations: [AppComponent, MainMenuComponent, TerraformingMarsCounterComponent, CluedoCounterComponent, DialogConfirmComponent, TerraformingMarsCounterSettingsComponent],
+  declarations: [
+    AppComponent,
+    MainMenuComponent,
+    TerraformingMarsCounterComponent,
+    CluedoCounterComponent,
+    DialogConfirmComponent,
+    TerraformingMarsCounterSettingsComponent,
+    PhaseTenCounterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the app is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
     BrowserAnimationsModule,

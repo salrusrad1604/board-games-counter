@@ -1,0 +1,10 @@
+<mat-card class="main">
+    <div class="container">
+        <mat-checkbox *ngFor="let item of formData"
+                      [ngClass]="{'line-through': item.value}"
+                      [(ngModel)]="item.value"
+                      (ngModelChange)="changeData()"
+                      [color]="'primary'"> {{item.label}}
+        </mat-checkbox>
+    </div>
+</mat-card>

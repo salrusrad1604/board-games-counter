@@ -15,9 +15,14 @@ export class MainMenuComponent {
       settings: true,
     },
     {
-      title: 'Клудо',
+      title: 'Клуэдо',
       link: '/cluedo',
       imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
+    },
+    {
+      title: '10 фаз',
+      link: '/phase-ten',
+      imgSrc: 'assets/phase-ten/phase-ten-main-picture.jpg',
     },
   ];
 

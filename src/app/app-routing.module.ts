@@ -4,6 +4,7 @@ import { CluedoCounterComponent } from './components/cluedo-counter/cluedo-count
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { TerraformingMarsCounterSettingsComponent } from './components/terraforming-mars-counter-settings/terraforming-mars-counter-settings.component';
 import { TerraformingMarsCounterComponent } from './components/terraforming-mars-counter/terraforming-mars-counter.component';
+import { PhaseTenCounterComponent } from './components/phase-ten-counter/phase-ten-counter.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'cluedo',
     component: CluedoCounterComponent,
+  },
+  {
+    path: 'phase-ten',
+    component: PhaseTenCounterComponent,
   },
   {
     path: '',

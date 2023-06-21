@@ -8,11 +8,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [],
   imports: [CommonModule],
   exports: [
+    MatCheckboxModule,
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
