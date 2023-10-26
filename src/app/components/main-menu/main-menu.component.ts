@@ -20,6 +20,11 @@ export class MainMenuComponent {
       imgSrc: 'assets/cluedo/cluedo-main-picture.jpg',
     },
     {
+      title: '10 фаз мастер',
+      link: '/phase-ten-master',
+      imgSrc: 'assets/phase-ten-master/phase-ten-master-main-picture.jpg',
+    },
+    {
       title: '10 фаз',
       link: '/phase-ten',
       imgSrc: 'assets/phase-ten/phase-ten-main-picture.jpg',

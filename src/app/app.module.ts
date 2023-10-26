@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 import { TerraformingMarsCounterSettingsComponent } from './components/terraforming-mars-counter-settings/terraforming-mars-counter-settings.component';
 import { PhaseTenCounterComponent } from './components/phase-ten-counter/phase-ten-counter.component';
+import { PhaseTenMasterCounterComponent } from './components/phase-ten-master-counter/phase-ten-master-counter.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PhaseTenCounterComponent } from './components/phase-ten-counter/phase-t
     DialogConfirmComponent,
     TerraformingMarsCounterSettingsComponent,
     PhaseTenCounterComponent,
+    PhaseTenMasterCounterComponent,
   ],
   imports: [
     BrowserModule,
