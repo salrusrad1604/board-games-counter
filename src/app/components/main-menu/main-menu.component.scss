@@ -1,4 +1,17 @@
-:host {
+.theme-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 4px 8px;
+}
+
+mat-icon {
+  cursor: pointer;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.612);
+}
+
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,4 +46,8 @@ mat-card-content {
     display: flex;
     align-items: center;
   }
+}
+
+.dark {
+  color: yellow;
 }

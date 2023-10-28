@@ -15,6 +15,10 @@ body {
   box-sizing: border-box;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 // // Extra small devices (portrait phones, less than 576px)
 // @media (max-width: 575.98px) {
 // }
@@ -34,3 +38,50 @@ body {
 // // Extra large devices (large desktops, 1200px and up)
 // @media (min-width: 1200px) {
 // }
+
+.dark {
+  color: #ccc;
+
+  .mat-card {
+    background-color: black;
+    color: #ccc;
+    -webkit-box-shadow: 1px 1px 15px 1px rgba(224, 230, 234, 0.2);
+    -moz-box-shadow: 1px 1px 15px 1px rgba(224, 230, 234, 0.2);
+    box-shadow: 1px 1px 15px 1px rgba(224, 230, 234, 0.2);
+  }
+
+  .mat-checkbox-frame {
+    border-color: #ccc;
+  }
+
+  table {
+    td {
+      background-color: black;
+    }
+  }
+
+  input::placeholder {
+    color: #ccc;
+    opacity: 0.5;
+  }
+
+  input {
+    background-color: black;
+  }
+
+  input,
+  select,
+  textarea {
+    color: #ccc;
+  }
+
+  textarea:focus,
+  input:focus {
+    color: #ccc;
+  }
+
+  .button {
+    border-color: #ccc;
+    color: #ccc;
+  }
+}

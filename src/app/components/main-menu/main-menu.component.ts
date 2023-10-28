@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent {
+  isDark = this.themeService.isDark;
   games = [
     {
       title: 'Покорение марса',
@@ -31,7 +33,7 @@ export class MainMenuComponent {
     },
   ];
 
-  constructor(private router: Router) {}
+  constructor(public themeService: ThemeService, private router: Router) {}
 
   onRoute(url: string): void {
     this.router.navigate([url]);
@@ -40,5 +42,9 @@ export class MainMenuComponent {
   onRouteSettings(url: string, event: MouseEvent) {
     this.router.navigate([url, 'settings']);
     event.stopPropagation();
+  }
+
+  changeTheme() {
+    this.themeService.toggleTheme();
   }
 }
