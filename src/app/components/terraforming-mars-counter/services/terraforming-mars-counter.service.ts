@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { makePrefix, prodPrefix, ratingInit, ResourceCounter, ResourceNames, resourcesInit } from './interfaces';
+import { generation, makePrefix, prodPrefix, ratingInit, ResourceCounter, ResourceNames, resourcesInit } from './interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +10,7 @@ export class TerraformingMarsCounterService {
   COUNT_NUMBER_KEY_STORAGE = `${this.KEY_STORAGE}_COUNT_NUMBER`;
   initCounterNumber = [1, 5, 10];
   rating = new BehaviorSubject<number>(ratingInit);
+  generation = new BehaviorSubject<number>(generation);
   resources = new BehaviorSubject<ResourceCounter[]>(JSON.parse(JSON.stringify(resourcesInit)));
   selectResource = new BehaviorSubject<string>(ResourceNames.rating);
 
@@ -18,13 +19,14 @@ export class TerraformingMarsCounterService {
   }
 
   private _setData() {
-    localStorage.setItem(this.KEY_STORAGE, JSON.stringify({ rating: this.rating.value, resources: this.resources.value }));
+    localStorage.setItem(this.KEY_STORAGE, JSON.stringify({ rating: this.rating.value, resources: this.resources.value, generation: this.generation.value }));
   }
 
   private _getData() {
     if (localStorage.getItem(this.KEY_STORAGE)) {
       const data = JSON.parse(localStorage.getItem(this.KEY_STORAGE) as string);
       this.rating.next(data.rating);
+      this.generation.next(data.generation);
       this.resources.next(data.resources);
     }
   }
@@ -92,6 +94,7 @@ export class TerraformingMarsCounterService {
       return v;
     });
 
+    this.generation.next(this.generation.value + 1);
     this.resources.next(newValue);
     this._setData();
   }
@@ -99,13 +102,14 @@ export class TerraformingMarsCounterService {
   reset(): void {
     this.resources.next(resourcesInit);
     this.rating.next(ratingInit);
+    this.generation.next(generation);
     this._setData();
   }
 
   getCountNumber() {
     if (localStorage.getItem(this.COUNT_NUMBER_KEY_STORAGE)) {
       const data = JSON.parse(localStorage.getItem(this.COUNT_NUMBER_KEY_STORAGE) as string);
-      return data === [] ? this.initCounterNumber : data;
+      return data.length === 0 ? this.initCounterNumber : data;
     }
     return this.initCounterNumber;
   }

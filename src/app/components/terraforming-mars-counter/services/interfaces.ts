@@ -18,6 +18,7 @@ export interface ResourceCounter {
 }
 
 export const ratingInit = 20;
+export const generation = 1;
 export const makePrefix = 'make';
 export const prodPrefix = 'prod';
 

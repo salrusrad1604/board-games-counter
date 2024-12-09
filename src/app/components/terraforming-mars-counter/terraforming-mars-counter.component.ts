@@ -19,6 +19,7 @@ export class TerraformingMarsCounterComponent {
   selectResource = this.terraMarsService.selectResource;
   resourcesData$ = this.terraMarsService.resources;
   ratingData$ = this.terraMarsService.rating;
+  generation$ = this.terraMarsService.generation;
 
   constructor(private dialog: MatDialog, private terraMarsService: TerraformingMarsCounterService) {}
 

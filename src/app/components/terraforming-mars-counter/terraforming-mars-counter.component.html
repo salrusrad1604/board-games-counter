@@ -8,8 +8,9 @@
 					{{ratingData$ | async}}
 				</p>
 			</div>
-			<div class="img-container"
-				 [style.background-image]="'url(assets/terraforming-mars/rt.jpg)'"></div>
+			<div class="generation">
+				{{generation$ | async}} ПКЛ
+			</div>
 			<div class="count-container">
 				<button class="reset"
 						mat-flat-button
