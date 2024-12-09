@@ -3,12 +3,12 @@
 		<mat-card class="resource-container">
 			<div class="count-container"
 				 (click)="setSelectResource(resourceNames.rating)">
-				<p class="counter-text resource-make-count"
+				<p class="counter-text resource-make-count unselect"
 				   [ngClass]="(selectResource| async) === resourceNames.rating ? 'selectField' : ''">
 					{{ratingData$ | async}}
 				</p>
 			</div>
-			<div class="generation">
+			<div class="generation unselect">
 				{{generation$ | async}} ПКЛ
 			</div>
 			<div class="count-container">
@@ -22,7 +22,7 @@
 				  class="resource-container">
 			<div class="count-container"
 				 (click)="setSelectResource(makePrefix + item.resourceType)">
-				<p class="counter-text  resource-make-count"
+				<p class="counter-text  resource-make-count unselect"
 				   [ngClass]="(selectResource| async) === makePrefix + item.resourceType ? 'selectField' : ''">
 					{{item.resourceMakeCount}}</p>
 			</div>
@@ -30,7 +30,7 @@
 				 [style.background-image]="'url(' + item.imgSrc + ')'"></div>
 			<div class="count-container"
 				 (click)="setSelectResource(prodPrefix + item.resourceType)">
-				<p class="counter-text resource-prod-count"
+				<p class="counter-text resource-prod-count unselect"
 				   [ngClass]="(selectResource| async) === prodPrefix + item.resourceType ? 'selectField' : ''">
 					{{item.resourceProdCount}}
 				</p>
