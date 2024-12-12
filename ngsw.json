@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1733762947610,
+  "timestamp": 1734020531030,
   "index": "/board-games-counter/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/board-games-counter/favicon.ico",
         "/board-games-counter/index.html",
-        "/board-games-counter/main.c172c560bc71e812.js",
+        "/board-games-counter/main.13b8e18ff6d78c12.js",
         "/board-games-counter/manifest.webmanifest",
         "/board-games-counter/polyfills.e1645089279b0c54.js",
         "/board-games-counter/runtime.f6363f103bab30e1.js",
-        "/board-games-counter/styles.75e0d76361cfa42b.css"
+        "/board-games-counter/styles.fdbac4445d70f53c.css"
       ],
       "patterns": []
     },
@@ -74,12 +74,12 @@
     "/board-games-counter/assets/terraforming-mars/terraforming-mars-main-picture.jpg": "3aa8bafad048d91c9693f2a097e17d18da9f1976",
     "/board-games-counter/assets/terraforming-mars/titan.jpg": "d7466d9a5bfb1f77b3603eda7fbaea4dc9ca5836",
     "/board-games-counter/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/board-games-counter/index.html": "fdd98e1f2e172e9820eafec9f3f54a7de0169cd0",
-    "/board-games-counter/main.c172c560bc71e812.js": "1901b566d11ea4c399328cec1bbeb20c65cb49e2",
+    "/board-games-counter/index.html": "7d4d895d9bc5a90a1631e37f0243ad2309d237f4",
+    "/board-games-counter/main.13b8e18ff6d78c12.js": "54c6711047e5f70cbaf229c06915a38fb844c5cb",
     "/board-games-counter/manifest.webmanifest": "362639bd0f2dacfd9646d37a23a62f958af8453c",
     "/board-games-counter/polyfills.e1645089279b0c54.js": "012b94e8c61a7f8d0714c87ca51420a7647a1c15",
     "/board-games-counter/runtime.f6363f103bab30e1.js": "609bb9f3f5cad3219609ce42e634437067504ca1",
-    "/board-games-counter/styles.75e0d76361cfa42b.css": "3ee0d1de40baeea350985e1e2b48dec1a728efe1"
+    "/board-games-counter/styles.fdbac4445d70f53c.css": "52abd2dd655621b3ffabccade7dedd3bfd196140"
   },
   "navigationUrls": [
     {
