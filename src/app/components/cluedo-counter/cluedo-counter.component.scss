@@ -113,4 +113,10 @@ mat-select {
     margin-top: 20px;
     max-width: 50%;
   }
+
+  mat-form-field {
+    border-radius: 10px;
+    background: #ccc;
+    padding: 10px;
+  }
 }

@@ -8,6 +8,7 @@ import { generation, makePrefix, prodPrefix, ratingInit, ResourceCounter, Resour
 export class TerraformingMarsCounterService {
   KEY_STORAGE = 'TERRAFORMING_MARS';
   COUNT_NUMBER_KEY_STORAGE = `${this.KEY_STORAGE}_COUNT_NUMBER`;
+  PEOPLE_KEY_STORAGE = `${this.KEY_STORAGE}_PEOPLE`;
   initCounterNumber = [1, 5, 10];
   rating = new BehaviorSubject<number>(ratingInit);
   generation = new BehaviorSubject<number>(generation);
@@ -96,6 +97,7 @@ export class TerraformingMarsCounterService {
 
     this.generation.next(this.generation.value + 1);
     this.resources.next(newValue);
+
     this._setData();
   }
 
@@ -114,7 +116,37 @@ export class TerraformingMarsCounterService {
     return this.initCounterNumber;
   }
 
+  getPeople() {
+    if (localStorage.getItem(this.PEOPLE_KEY_STORAGE)) {
+      const data = JSON.parse(localStorage.getItem(this.PEOPLE_KEY_STORAGE) as string);
+      return data.length === 0 ? [] : data;
+    }
+    return [];
+  }
+
   setCounterNumber(cnAr: number[]) {
     localStorage.setItem(this.COUNT_NUMBER_KEY_STORAGE, JSON.stringify(cnAr));
+  }
+
+  setPeople(people: string[]) {
+    localStorage.setItem(this.PEOPLE_KEY_STORAGE, JSON.stringify(people));
+  }
+
+  getPeopleByGeneration(generation: number) {
+    const peoples = this.getPeople();
+
+    if (peoples.length === 0) {
+      return '';
+    }
+
+
+    return this.getValue(peoples, generation - 1);
+  }
+
+  getValue(arr: string[], diff: number) {
+    let newIndex = (diff) % arr.length;
+    if (newIndex < 0)
+      newIndex = arr.length + newIndex;
+    return arr[newIndex];
   }
 }

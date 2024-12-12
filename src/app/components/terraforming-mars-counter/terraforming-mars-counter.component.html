@@ -8,7 +8,7 @@
 					{{ratingData$ | async}}
 				</p>
 			</div>
-			<div class="generation unselect">
+			<div class="generation unselect" (click)="getPeople()">
 				{{generation$ | async}} ПКЛ
 			</div>
 			<div class="count-container">

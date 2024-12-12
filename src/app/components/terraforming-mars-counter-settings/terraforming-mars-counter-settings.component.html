@@ -5,19 +5,41 @@
                 <mat-icon>settings</mat-icon>
                 Покорение марса
             </mat-card-title>
-            <button mat-icon-button
-                    (click)='addCountNumber()'>
+            <button mat-icon-button (click)='addCountNumber()'>
                 <mat-icon>add</mat-icon>
             </button>
         </mat-card-title-group>
-        <div class='form-list'>
-            <mat-form-field *ngFor="let control of formArray.controls; index as i">
+        <div class='form-list' cdkDropList (cdkDropListDropped)="dropCount($event)">
+            <mat-form-field *ngFor="let control of formArray.controls; index as i" cdkDrag>
+                <div  *cdkDragPreview class='input-form placeholder-drag-and-drop'>
+                    <input type="number" matInput autocomplete="off" [formControl]='getControl(i)'>
+                </div>
                 <div class='input-form'>
-                    <input type="number"
-                           matInput
-                           autocomplete="off"
-                           [formControl]='getControl(i)'>
+                    <input type="number" matInput autocomplete="off" [formControl]='getControl(i)'>
                     <mat-icon (click)='deleteCountNumber(i)'>delete</mat-icon>
+                </div>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div>
+        <mat-card-title-group>
+            <mat-card-title>
+                <mat-icon>people</mat-icon>
+                Игроки
+            </mat-card-title>
+            <button mat-icon-button (click)='addPeople()'>
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-card-title-group>
+        <div class='form-list' cdkDropList (cdkDropListDropped)="dropPeople($event)">
+            <mat-form-field *ngFor="let control of peopleArray.controls; index as i" cdkDrag>
+                <div  *cdkDragPreview class='input-form placeholder-drag-and-drop'>
+                    <input type="text" matInput autocomplete="off" [formControl]='getPeople(i)'>
+                </div>
+                <div class='input-form'>
+                    <input type="text" matInput autocomplete="off" [formControl]='getPeople(i)'>
+                    <mat-icon (click)='deletePeople(i)'>delete</mat-icon>
                 </div>
             </mat-form-field>
         </div>

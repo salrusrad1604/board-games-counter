@@ -3,6 +3,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 interface DialogData {
   title: string;
+  hide?: string;
 }
 
 @Component({
