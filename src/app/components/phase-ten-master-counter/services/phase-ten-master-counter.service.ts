@@ -22,7 +22,7 @@ export class PhaseTenMasterCounterService {
     },
     {
       value: false,
-      label: 'Последовательность из 4-х + квартет (4 одиноковых)',
+      label: 'Последовательность из 4-х + квартет (4 одинаковых)',
     },
     {
       value: false,
@@ -46,7 +46,7 @@ export class PhaseTenMasterCounterService {
     },
     {
       value: false,
-      label: '5 одиноковых + 3 одинаковых',
+      label: '5 одинаковых + 3 одинаковых',
     },
     {
       value: false,
