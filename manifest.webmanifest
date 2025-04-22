@@ -1,8 +1,6 @@
 {
-  "name": "board-games-counter",
-  "short_name": "board-games-counter",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Board games counter",
+  "short_name": "Board games counter",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
