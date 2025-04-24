@@ -1,16 +1,19 @@
-import { Component } from "@angular/core";
-import { MatDialog } from "@angular/material/dialog";
-import { DialogConfirmComponent } from "../dialog-confirm/dialog-confirm.component";
-import { makePrefix, prodPrefix, ResourceNames } from "./services/interfaces";
-import { TerraformingMarsCounterService } from "./services/terraforming-mars-counter.service";
-import { take } from "rxjs/operators";
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogConfirmComponent } from '../dialog-confirm/dialog-confirm.component';
+import { makePrefix, prodPrefix, ResourceNames } from './services/interfaces';
+import { TerraformingMarsCounterService } from './services/terraforming-mars-counter.service';
+import { take, takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
-  selector: "app-terraforming-mars-counter",
-  templateUrl: "./terraforming-mars-counter.component.html",
-  styleUrls: ["./terraforming-mars-counter.component.scss"],
+  selector: 'app-terraforming-mars-counter',
+  templateUrl: './terraforming-mars-counter.component.html',
+  styleUrls: ['./terraforming-mars-counter.component.scss'],
 })
 export class TerraformingMarsCounterComponent {
+  ngUnsubscribe$ = new Subject();
+
   makePrefix = makePrefix;
   prodPrefix = prodPrefix;
   resourceNames = ResourceNames;
@@ -21,12 +24,19 @@ export class TerraformingMarsCounterComponent {
   resourcesData$ = this.terraMarsService.resources;
   ratingData$ = this.terraMarsService.rating;
   generation$ = this.terraMarsService.generation;
-  firtsPeople = "";
+  firtsPeople = '';
 
   constructor(private dialog: MatDialog, private terraMarsService: TerraformingMarsCounterService) {}
 
   ngOnInit() {
-    this.generation$.pipe(take(1)).subscribe(v => (this.firtsPeople = this.terraMarsService.getPeopleByGeneration(v)));
+    this.generation$
+      .pipe(takeUntil(this.ngUnsubscribe$))
+      .subscribe(v => (this.firtsPeople = this.terraMarsService.getPeopleByGeneration(v)));
+  }
+
+  ngOnDestroy() {
+    this.ngUnsubscribe$.next();
+    this.ngUnsubscribe$.complete();
   }
 
   setSelectResource(selRes: string): void {
@@ -38,7 +48,7 @@ export class TerraformingMarsCounterComponent {
   }
 
   produce(): void {
-    const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: "Produce?" } });
+    const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: 'Produce?' } });
 
     dialogRef
       .afterClosed()
@@ -51,7 +61,7 @@ export class TerraformingMarsCounterComponent {
   }
 
   reset(): void {
-    const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: "Reset?" } });
+    const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: 'Reset?' } });
 
     dialogRef
       .afterClosed()
