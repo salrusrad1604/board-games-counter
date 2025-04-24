@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { DialogConfirmComponent } from '../dialog-confirm/dialog-confirm.component';
-import { CluedoCounterService } from './services/cluedo-counter.service';
-import { FieldList, type } from './services/interfaces';
+import { Component } from "@angular/core";
+import { MatDialog } from "@angular/material/dialog";
+import { Observable } from "rxjs";
+import { map, take } from "rxjs/operators";
+import { DialogConfirmComponent } from "../dialog-confirm/dialog-confirm.component";
+import { CluedoCounterService } from "./services/cluedo-counter.service";
+import { FieldList, type } from "./services/interfaces";
 
 @Component({
-  selector: 'app-cluedo-counter',
-  templateUrl: './cluedo-counter.component.html',
-  styleUrls: ['./cluedo-counter.component.scss'],
+  selector: "app-cluedo-counter",
+  templateUrl: "./cluedo-counter.component.html",
+  styleUrls: ["./cluedo-counter.component.scss"],
 })
 export class CluedoCounterComponent {
   hideDiv = false;
@@ -35,20 +35,23 @@ export class CluedoCounterComponent {
   }
 
   onClick(v: string | null | undefined): void {
-    if (v === 'hideDiv') {
+    if (v === "hideDiv") {
       this.hideDiv = !this.hideDiv;
     }
-    if (v === 'reset') {
-      const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: 'Reset?' } });
+    if (v === "reset") {
+      const dialogRef = this.dialog.open(DialogConfirmComponent, { data: { title: "Reset?" } });
 
-      dialogRef.afterClosed().subscribe(result => {
-        if (result) {
-          this.cluedoCounterService.reset();
-          this.hideDiv = !this.hideDiv;
-        }
-      });
+      dialogRef
+        .afterClosed()
+        .pipe(take(1))
+        .subscribe(result => {
+          if (result) {
+            this.cluedoCounterService.reset();
+            this.hideDiv = !this.hideDiv;
+          }
+        });
     }
-    if (v === 'playerSelect') {
+    if (v === "playerSelect") {
       this.cluedoCounterService.setPlayer(this.playersNumber);
       this.gemeStart = !this.gemeStart;
     }

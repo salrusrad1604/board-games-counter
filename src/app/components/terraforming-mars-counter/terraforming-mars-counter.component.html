@@ -1,61 +1,55 @@
 <mat-card class="main">
-	<div class="resources-container">
-		<mat-card class="resource-container">
-			<div class="count-container"
-				 (click)="setSelectResource(resourceNames.rating)">
-				<p class="counter-text resource-make-count unselect"
-				   [ngClass]="(selectResource| async) === resourceNames.rating ? 'selectField' : ''">
-					{{ratingData$ | async}}
-				</p>
-			</div>
-			<div class="generation unselect" (click)="getPeople()">
-				{{generation$ | async}} ПКЛ
-			</div>
-			<div class="count-container">
-				<button class="reset"
-						mat-flat-button
-						color="warn"
-						(click)="reset()">Reset</button>
-			</div>
-		</mat-card>
-		<mat-card *ngFor="let item of resourcesData$ | async"
-				  class="resource-container">
-			<div class="count-container"
-				 (click)="setSelectResource(makePrefix + item.resourceType)">
-				<p class="counter-text  resource-make-count unselect"
-				   [ngClass]="(selectResource| async) === makePrefix + item.resourceType ? 'selectField' : ''">
-					{{item.resourceMakeCount}}</p>
-			</div>
-			<div class="img-container"
-				 [style.background-image]="'url(' + item.imgSrc + ')'"></div>
-			<div class="count-container"
-				 (click)="setSelectResource(prodPrefix + item.resourceType)">
-				<p class="counter-text resource-prod-count unselect"
-				   [ngClass]="(selectResource| async) === prodPrefix + item.resourceType ? 'selectField' : ''">
-					{{item.resourceProdCount}}
-				</p>
-			</div>
-		</mat-card>
-	</div>
-	<mat-card class="button-settings">
-		<div class="decrement-buttons">
-			<button *ngFor='let value of buttonCoutnValues'
-					mat-flat-button
-					color="warn"
-					(click)='incrementDecrementMake(-value)'>{{-value}}</button>
-		</div>
-		<div class="increment-buttons">
-			<button *ngFor='let value of buttonCoutnValues'
-					mat-flat-button
-					color="warn"
-					(click)='incrementDecrementMake(value)'>{{value}}</button>
-		</div>
-		<div class="final-button-container">
-			<button mat-flat-button
-					color="warn"
-					class="final-button"
-					(click)="produce()">Produce</button>
-		</div>
-
-	</mat-card>
+  <div class="resources-container">
+    <mat-card class="resource-container">
+      <div class="count-container" (click)="setSelectResource(resourceNames.rating)">
+        <p
+          class="counter-text resource-make-count unselect"
+          [ngClass]="(selectResource | async) === resourceNames.rating ? 'selectField' : ''"
+        >
+          {{ ratingData$ | async }}
+        </p>
+      </div>
+      <div class="generation unselect">
+        <span>{{ generation$ | async }} ПКЛ</span>
+        <span class="people">{{ firtsPeople }}</span>
+      </div>
+      <div class="count-container">
+        <button class="reset" mat-flat-button color="warn" (click)="reset()">Reset</button>
+      </div>
+    </mat-card>
+    <mat-card *ngFor="let item of resourcesData$ | async" class="resource-container">
+      <div class="count-container" (click)="setSelectResource(makePrefix + item.resourceType)">
+        <p
+          class="counter-text resource-make-count unselect"
+          [ngClass]="(selectResource | async) === makePrefix + item.resourceType ? 'selectField' : ''"
+        >
+          {{ item.resourceMakeCount }}
+        </p>
+      </div>
+      <div class="img-container" [style.background-image]="'url(' + item.imgSrc + ')'"></div>
+      <div class="count-container" (click)="setSelectResource(prodPrefix + item.resourceType)">
+        <p
+          class="counter-text resource-prod-count unselect"
+          [ngClass]="(selectResource | async) === prodPrefix + item.resourceType ? 'selectField' : ''"
+        >
+          {{ item.resourceProdCount }}
+        </p>
+      </div>
+    </mat-card>
+  </div>
+  <mat-card class="button-settings">
+    <div class="decrement-buttons">
+      <button *ngFor="let value of buttonCoutnValues" mat-flat-button color="warn" (click)="incrementDecrementMake(-value)">
+        {{ -value }}
+      </button>
+    </div>
+    <div class="increment-buttons">
+      <button *ngFor="let value of buttonCoutnValues" mat-flat-button color="warn" (click)="incrementDecrementMake(value)">
+        {{ value }}
+      </button>
+    </div>
+    <div class="final-button-container">
+      <button mat-flat-button color="warn" class="final-button" (click)="produce()">Produce</button>
+    </div>
+  </mat-card>
 </mat-card>

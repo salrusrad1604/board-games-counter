@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl } from '@angular/forms';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-import { TerraformingMarsCounterService } from '../terraforming-mars-counter/services/terraforming-mars-counter.service';
-import { moveItemInArray } from '@angular/cdk/drag-drop';
+import { Component, OnInit } from "@angular/core";
+import { FormArray, FormControl } from "@angular/forms";
+import { Subject } from "rxjs";
+import { takeUntil } from "rxjs/operators";
+import { TerraformingMarsCounterService } from "../terraforming-mars-counter/services/terraforming-mars-counter.service";
+import { moveItemInArray } from "@angular/cdk/drag-drop";
 
 @Component({
-  selector: 'app-terraforming-mars-counter-settings',
-  templateUrl: './terraforming-mars-counter-settings.component.html',
-  styleUrls: ['./terraforming-mars-counter-settings.component.scss'],
+  selector: "app-terraforming-mars-counter-settings",
+  templateUrl: "./terraforming-mars-counter-settings.component.html",
+  styleUrls: ["./terraforming-mars-counter-settings.component.scss"],
 })
 export class TerraformingMarsCounterSettingsComponent implements OnInit {
   formArray: FormArray = new FormArray([]);
@@ -54,7 +54,7 @@ export class TerraformingMarsCounterSettingsComponent implements OnInit {
   }
 
   addPeople() {
-    this.peopleArray.push(new FormControl(''));
+    this.peopleArray.push(new FormControl(""));
   }
 
   dropCount(event: any) {
