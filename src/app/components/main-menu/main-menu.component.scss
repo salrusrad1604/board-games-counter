@@ -1,7 +1,7 @@
 .theme-toggle {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 4px 8px;
 }
 
@@ -42,7 +42,7 @@ mat-card-content {
 ::ng-deep mat-card-title-group {
   min-height: 40px;
 
-  > div {
+  >div {
     display: flex;
     align-items: center;
   }
