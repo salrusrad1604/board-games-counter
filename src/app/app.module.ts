@@ -13,6 +13,7 @@ import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confi
 import { TerraformingMarsCounterSettingsComponent } from './components/terraforming-mars-counter-settings/terraforming-mars-counter-settings.component';
 import { PhaseTenCounterComponent } from './components/phase-ten-counter/phase-ten-counter.component';
 import { PhaseTenMasterCounterComponent } from './components/phase-ten-master-counter/phase-ten-master-counter.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { PhaseTenMasterCounterComponent } from './components/phase-ten-master-co
     BrowserAnimationsModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
